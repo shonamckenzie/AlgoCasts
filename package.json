@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shonamckenzie/AlgoCasts#readme",
   "dependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "lodash": "^4.17.20"
   }
 }
