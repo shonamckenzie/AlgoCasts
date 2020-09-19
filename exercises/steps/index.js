@@ -17,6 +17,37 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n, row = 0, stair = '') {
+  // recursive solution
+  if (n === row) {
+    return;
+  }
+  if (stair.length === n) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  steps(n, row, stair)
+}
 
 module.exports = steps;
+
+// function steps(n) {
+//   // eslint-disable-next-line no-plusplus
+//   for (let row = 0; row < n; row++) {
+//     let stair = '';
+//     // eslint-disable-next-line no-plusplus
+//     for (let column = 0; column < n; column++) {
+//       if (column <= row) {
+//         stair += '#';
+//       } else {
+//         stair += ' ';
+//       }
+//     }
+//     console.log(stair);
+//   }
+// }
